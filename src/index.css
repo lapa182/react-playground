@@ -1,0 +1,11 @@
+.reactify > .row {
+    height: 100vh;
+}
+
+.reactify .alert {
+    margin-top: 50px;
+}
+
+.reactify textarea {
+    height: calc(100vh - 100px);
+}
