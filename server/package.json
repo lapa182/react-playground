@@ -1,0 +1,16 @@
+{
+  "name": "wfh-mailer",
+  "version": "1.0.0",
+  "description": "Working from home mail service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igo Lapa",
+  "license": "MIT",
+  "dependencies": {
+    "email-templates": "^3.6.0",
+    "nodemailer": "^4.6.4",
+    "pug": "^2.0.3"
+  }
+}
