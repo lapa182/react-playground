@@ -9,6 +9,8 @@ router.get('/test', (req, res, next) => {
 
 router.post('/send', (req, res, next) => {
 
+    res.header("Content-Type",'application/json');
+
     const nodeTransport = nodemailer.createTransport({
         host: 'smtp.office365.com',
         port: 587,
@@ -37,7 +39,7 @@ router.post('/send', (req, res, next) => {
             to: 'igo.lapa@tribalworldwide.co.uk'
         },
         locals: {
-            name: 'Elon'
+            message: req.body.emailText
         }
     })
     .then(function () {

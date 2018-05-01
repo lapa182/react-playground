@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Alert from './Alert';
+import axios from 'axios';
 
 export default class Form extends React.Component {
     constructor(props) {
@@ -22,12 +23,17 @@ export default class Form extends React.Component {
     }
 
     handleSubmit(event) {
-        console.info(this.state.value);
-        this.setState({
-            value: ''
+        let emailText = this.state.value;
+
+        axios.post('/api/send', {emailText}).then(res => {
+
+            this.setState({
+                value: ''
+            });
+            
+            console.log(res.status);
         });
 
-        alert('Email successfully fired');
         event.preventDefault();
     }
 
